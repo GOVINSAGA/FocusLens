@@ -1,0 +1,21 @@
+{
+  "env": {
+    "ANTHROPIC_BASE_URL": "http://localhost:4000",
+    "ANTHROPIC_AUTH_TOKEN": "dummy-token",
+    "ANTHROPIC_API_KEY": "",
+    "ANTHROPIC_MODEL": "z-ai/glm5"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(taskkill /IM dotnet.exe /F)",
+      "Bash(taskkill /PID 25608 /F)",
+      "Bash(taskkill /pid 25608 /f)",
+      "Bash(taskkill /fi \"imagename eq dotnet.exe\")",
+      "Bash(taskkill //IM dotnet.exe //F)",
+      "Bash(start ng:*)",
+      "Bash(echo \"✅ BACKEND IS WORKING CORRECTLY: The health endpoint at http://localhost:5123/api/health returns {\"\"status\"\":\"\"ok\"\"}. The HTTPS warning is just a development warning and doesn''t affect functionality.\")",
+      "Bash(curl -s http://localhost:4200)",
+      "Bash(echo \"✅ FULL-STACK APPLICATION VERIFIED: Frontend \\(Angular 17\\) running at http://localhost:4200, Backend \\(.NET 8\\) health endpoint at http://localhost:5123/api/health returns {\"\"status\"\":\"\"ok\"\"}. Both applications are operational.\")"
+    ]
+  }
+}
