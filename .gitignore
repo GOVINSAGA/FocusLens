@@ -11,6 +11,16 @@
 npm-debug.log
 yarn-error.log
 
+# Backend (.NET specific)
+/backend/bin/
+/backend/obj/
+/backend/*.user
+/backend/*.userosscache
+/backend/*.sln.docstates
+
+# Claude
+.claude/
+
 # IDEs and editors
 .idea/
 .project
