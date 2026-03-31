@@ -18,6 +18,9 @@ yarn-error.log
 /backend/*.userosscache
 /backend/*.sln.docstates
 
+# Logs
+*.log
+
 # Claude
 .claude/
 

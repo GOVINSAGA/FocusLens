@@ -9,13 +9,21 @@ namespace backend.Models
         {
         }
 
-        // Add DbSet entities here as needed for the application
-        // Example: public DbSet<EntityName> EntityNames { get; set; }
+        public DbSet<User> Users { get; set; } = default!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             // Configure Oracle-specific mappings if needed
+
+            // Configure User entity
+            modelBuilder.Entity<User>(entity =>
+            {
+                entity.ToTable("Users"); // Optional: specify table name
+                entity.HasIndex(u => u.Email).IsUnique(); // Ensure email is unique
+                entity.Property(u => u.CreatedAt)
+                      .HasDefaultValueSql("SYSDATE"); // Oracle specific: set CreatedAt to current timestamp
+            });
         }
     }
 }
